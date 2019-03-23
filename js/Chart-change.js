@@ -23,7 +23,7 @@ $.getJSON(seaLevelData,function(data){
     data: {
         labels: years,
         datasets: [{
-            label: 'Average Sea Level',
+            label: 'Average Sea Level(mm)',
             backgroundColor: ['rgb(255, 99, 132)'],
             borderColor: ['rgb(255, 99, 132)'],
             data: sealevels
