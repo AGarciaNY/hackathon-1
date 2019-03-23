@@ -1,6 +1,6 @@
 #title-rate {
     color: white;
-    margin: 10px 20px 20px 42%;
+    margin: 10px 20px 20px 30%;
 }
 
 body {
@@ -81,3 +81,34 @@ input[type=range]{
 /*.back-button{*/
     
 /*}*/
+
+/*body{*/
+/*     background:url("https://vfs-gce-usw-393-2.c9.io/vfs/6000823/9cIeyAOyEGcdlW5H/workspace/Loading/blackhole.gif") no-repeat center center fixed;*/
+/*     background-size:cover;*/
+/*}*/
+
+#temp {
+    margin-top: 350px;
+    margin-right: 250px;
+}
+
+.endYear {
+    position: absolute;
+    right: 0;
+    color: white;
+    top: 0;
+}
+
+.yearLabel {
+    width: 53vw;
+    color: white;
+    position: relative;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+#slide {
+    text-align: center;
+    color: white;
+    
+}

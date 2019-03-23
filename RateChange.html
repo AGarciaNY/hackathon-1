@@ -9,6 +9,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <!-- Your CSS Linked Below-->
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="css/rate.css">
   <!-- jQuery Linked Below-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -18,11 +19,39 @@
   <script src="js/rate.js" defer></script>
   <link rel="icon" href="https://png.pngtree.com/element_origin_min_pic/16/09/19/1157df5d59f1661.jpg">
 </head>
-<h1 id="title-rate"><b>Rate of Change</b></h1>
+<h1 id="title-rate"><b>Carbon Dioxide Levels over time </b></h1>
 
 <body>
+  
+  <div class="nav-container">
+      <span style="font-size:30px;cursor:pointer; color:black; padding: 10px; background:white" onclick="openNav()">&#9776; </span>
+    
+      <div id="mySidenav" class="sidenav" >
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="nav-side-item" href="index.html">About</a>
+        <a class="nav-side-item" href="RateChange.html">Rate Of Change</a>
+        <a class="nav-side-item" href="Displacment.html">Displacement</a>
+        <a class="nav-side-item" href="sealevel.html">Effects on Sea</a>
+        <a class="nav-side-item" href="Contact-us.html">Contact</a>
+      </div>
+    </div>
+    
+    <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.display = "block";
+        document.getElementById("mySidenav").style.width = "250px";;
+      
+      
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.display = "none";
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+  
   <!--<a class='temporary' href="index.html"> Link back</a>-->
- <a class='temporary' href="index.html"><button id="back-button">Go Back</button></a>
+ <!--<a class='temporary' href="index.html"><button id="back-button" type="button" class="btn btn-primary">Go Back</button></a>-->
   <div id="container">
     <div class="row">
       <div class="col-md-4"></div>
@@ -47,13 +76,21 @@
 
   </div>
 
+<div class="yearLabel">1884<div class="endYear">2018</div></div>
 
   <section class="timemachine">
     <form class="form" action="">
       <input type="range" />
     </form>
   </section>
+  <div id="slide">Hold and Slide</div>
+  <div class="row" id="temp">
+      <div class="col-md-4"></div>
+      <div class="col-md-4"></div>
+      <img src="https://climate.nasa.gov/system/time_series_items/3_colorbar_globaltemp_fahrenheit.jpg">
 
+      <div class="col-md-4"></div>
+    </div>
 
   <script>
     var images = ["https://climate.nasa.gov/system/time_series_images/1597_gt_1884_720x360.jpg",

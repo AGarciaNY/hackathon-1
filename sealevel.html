@@ -10,6 +10,7 @@
     <!-- Your CSS Linked Below-->
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/sea.css">
+    <link rel="stylesheet" href="style.css">
     <!-- jQuery Linked Below-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
      <!-- Bootstrap Javascript -->
@@ -19,27 +20,46 @@
     <script src="js/sea.js"></script>
   </head>
   <body>
+    
+    <div class="nav-container">
+      <span style="font-size:30px;cursor:pointer; color:black; padding: 10px; background:white" onclick="openNav()">&#9776; </span>
+    
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="nav-side-item" href="index.html">About</a>
+        <a class="nav-side-item" href="RateChange.html">Rate Of Change</a>
+        <a class="nav-side-item" href="Displacment.html">Displacement</a>
+        <a class="nav-side-item" href="sealevel.html">Effects on Sea</a>
+        <a class="nav-side-item" href="Contact-us.html">Contact</a>
+      </div>
+    </div>
+    
+    <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.display = "block";
+        document.getElementById("mySidenav").style.width = "250px";;
+      
+      
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.display = "none";
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
                 
                 <div>
-                
-                  <h1>Sea Level rising</h1>
+                  <center>
+                    <h1>Sea Level rising</h1>
+                  </center>
+                  
                 </div>
-                  <button id='pastbutton'>PAST</button>
-                  <button id="nowbutton">NOW</button>
-                  <button id="futerbutton">FUTURE</button>
+                  <button id='pastbutton'>-1</button>
+                  <h2 id="years"></h2>
+                  <button id="futerbutton">+1</button>
                 
-              
+              <h1 id="nowinfo">Change in sea level:</h1>
                 
-              
-              <div id="pastinfo">
-                <h1 class="texttime">the past from ___To __</h1>
-                <h1 class="textsea">sea level:<h2 class="sea level"></h2></h1>
-                <h1 class="textrate">Rate of change:<h2 class="searate"></h2></h1>
-              </div>
-              <div id="nowinfo">
-              </div>
-              <div id="futerinfo">
-              </div>
               
   </body>
 </html>

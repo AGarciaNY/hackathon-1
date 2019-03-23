@@ -19,31 +19,92 @@
   <link rel="icon" href="https://png.pngtree.com/element_origin_min_pic/16/09/19/1157df5d59f1661.jpg">
 </head>
 
-<body>
+<body id="index-html">
 
 
-  <div>
-    <nav class="fontc" id="navv">
-      <p>
-        <h3 class="navname">Earth Awareness 1.0</h3>
-      </p>
-      <div class="navdata">
-        <ul id="hpnav">
-          <li class="navitems"><a href="index.html">Home</a></li>
-          <li class="navitems"><a href="RateChange.html">Rate of increase</a></li>
-          <li class="navitems"><a href="Displacment.html">Displacment</a></li>
-          <li class="navitems dropdown">
-            <a class="dropbtn">Dropdown</a>
-            <div class="dropdown-content">
-              <a href="">Comment here</a>
-              <a href="">Play or Stop music</a>
-              <a href="">a</a>
-            </div>
-          </li>
-        </ul>
+  <div class="nav-container">
+      <span style="font-size:30px;cursor:pointer; color:black; padding: 10px; background:white" onclick="openNav()">&#9776; </span>
+    
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="nav-side-item" href="index.html">About</a>
+        <a class="nav-side-item" href="RateChange.html">Rate Of Change</a>
+        <a class="nav-side-item" href="Displacment.html">Displacement</a>
+        <a class="nav-side-item" href="sealevel.html">Effects on Sea</a>
+        <a class="nav-side-item" href="Contact-us.html">Contact</a>
       </div>
-    </nav>
-  </div>
+    </div>
+    
+    
+    
+    <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.display = "block";
+        document.getElementById("mySidenav").style.width = "250px";;
+      
+      
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.display = "none";
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+    
+    
+    <h1 id="index-h1">Global Warming</h1>
+    <hr>
+    
+    <div class="index-body">
+      <div id="cause">
+        <hr>
+        <h3 class="hideme">Causes</h3>
+        <p  class="hideme" style="text-indent: 50px;">
+          Everyone knowns, global warming is bad, that is unless you'ver lived under a rock 
+          for an unbelievable amount of time, to which you would be dead and not reading this.
+          The primary causes for global warming being a problem is due to the properties of CO2. CO2 has
+          the capacity to capture heat, thus turing our atmosphere into one that super heats the Earth( perhaps Super heat
+          is too strong of a word).
+        </p>
+        <center><img  class="hideme" src="https://www.futuretimeline.net/blog/images/1183-global-warming-future-timeline.jpg"></img></center>
+        <p style="text-indent: 50px;">
+          Everyone else also knows that there are an unbelievable amount of thing in our daily lives that contribute to
+          the ever amounting problem that is gloabl warming. These everyday objects consist of trash, such as plastic bags and 
+          fumes emmited by cars and recyclables that are thrown away as trash. Of course thers's always those pesky aluminum 
+          containers, to which take forever to decompose. As for how this affects the Earths overall climate, it primarily
+          causes an increase in climate as in order to melt or decompose certain peices of trash. This melting or decomposition process 
+          consumes massive amounts of energy, to which causes more fumes and more CO2 to be eposed into the air, thus we've come full circle.
+        </p>
+        
+      </div>
+      <diV id="effect">
+        <h3 class="hideme">Effects</h3>
+        <center><img class="hideme" src="https://mendeleyblog.files.wordpress.com/2016/09/climatechange.jpg?w=810"></img></center>
+        <p class="hideme" style="text-indent: 50px;">
+          Climate change has different effects on many aspects of life, ranging from minor
+          inconveniences (ie:decreasing salinity), to multigenerational disasters (ie: being
+          cooked alive). The rise in sea level, for instance, will eventually flood entire 
+          countries. The water shortages in drought-afflicted areas, will lead to wars over
+          water. The heat will kill hundreds of thousands. There is some good news, like the improvments 
+          in shipping that come as a result of melting ice, or the possibility of farming in 
+          Siberia. But that good news is nothing compared to the suffering of millions that
+          will come if climate change, and the issues surrounding it aren't adressed soon.
+        </p>
+      </div>
+      <div id="solution">
+        <h3 class="hideme">Solutions</h3>
+        <p  class="hideme" style="text-indent: 50px;">
+          Many have proposed various different solutions to this problem. Ideas range 
+          from a 'Green New Deal', to cutting back on several modern luxuries that 
+          pollute. They all seem to center around reducing the ammount pollutants
+          that are pumped into the air, land, and water. There are many things that
+          one can do in order to decrease the amount of pollutants that they produce.
+          Those things include consuming less, recycling, and turning off faucets and
+          lights, so that less energy is used.
+        </p>
+        <center><img class="hideme" src="https://www.ucsusa.org/sites/default/files/images/2018/07/1200-roadfire.jpg"></img></center>
+      </div>
+    </div>
 </body>
 
 </html>

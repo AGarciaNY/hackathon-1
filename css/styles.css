@@ -133,6 +133,12 @@ span{
 .nav-container{
   z-index: 2;
   position: fixed;
+  top: 0px;
+  border-radius: 15px;
+}
+
+.nav-container span{
+    border-radius: 15px;
 }
 
 .sidenav {
@@ -176,4 +182,53 @@ span{
   .sidenav a {font-size: 18px;}
 }
 
+.index-body{
+    width: 100%;
+    padding: 20px;
+}
 
+#cause{
+    padding: 30px;
+}
+
+#cause p {
+    padding: 30px;
+}
+
+#effect{
+    padding: 30px;
+}
+
+#effect p {
+    padding: 30px;
+}
+
+#solution{
+    padding: 30px;
+}
+
+#solution p {
+    padding: 30px;
+}
+
+#index-html{
+    font-size: 25px;
+    background: linear-gradient(
+      217deg,
+      rgba(255, 0, 0, 0.8),
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+
+}
+
+#index-h1{
+    color:black;
+    padding-top: 30px;
+}
+
+.hideme
+{
+    opacity:0;
+}

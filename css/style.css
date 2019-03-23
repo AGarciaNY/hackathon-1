@@ -7,6 +7,11 @@ span{
 .nav-container{
   z-index: 2;
   position: fixed;
+  top: 0px;
+}
+
+.nav-container span{
+  border-radius: 15px;
 }
 
 .sidenav {
@@ -105,6 +110,8 @@ hr{
   height: 2px;
 }
 
-.close-btn{
-  background-color: white;
+#jumbotron {
+  height: 300px;
+  width: 300px;
+  color: green;
 }
