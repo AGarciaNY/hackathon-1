@@ -21,19 +21,23 @@ $.getJSON(seaLevelData,function(data){
 
     // The data for our dataset
     data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: years,
         datasets: [{
-            label: 'My First dataset',
+            label: 'Average Sea Level',
             backgroundColor: ['rgb(255, 99, 132)'],
             borderColor: ['rgb(255, 99, 132)'],
-            data: [{labels:years,datasets:sealevels}]
+            data: sealevels
             
         }]
     },
     options: {scales: {
         yAxes: [{ticks: {beginAtZero: true}}]
         
-    }
+    },
+    xAxes:[{
+        type:"category",
+        labels: years
+    }]
         
     }
     })

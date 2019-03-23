@@ -2,12 +2,42 @@
 <html>
     <head>
         <title> Graph of Change </title>
+        <h1>Zoom In to view</h1>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
-        <script src="js/Chart-change.js"></script>        
+        <script src="js/Chart-change.js"></script>  
+        <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
+        
+    <div class="nav-container">
+      <span style="font-size:30px;cursor:pointer; color:black; padding: 10px; background:white" onclick="openNav()">&#9776; </span>
+    
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="nav-side-item" href="index.html">About</a>
+        <a class="nav-side-item" href="RateChange.html">Rate Of Change</a>
+        <a class="nav-side-item" href="Displacment.html">Displacement</a>
+        <a class="nav-side-item" href="sealevel.html">Effects on Sea Level</a>
+        <a class="nav-side-item" href="Contact-us.html">Contact</a>
+        <a class="nav-side-item" href="imgApi.html">Image Api</a>
+        <a class="nav-side-item" href="Chart-rate-of-change.html">Chart of Rate of Change</a>
+      </div>
+    </div>
+    <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.display = "block";
+        document.getElementById("mySidenav").style.width = "250px";;
+      
+      
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.display = "none";
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
         <h1></h1>
     <canvas id="myChart"></canvas>
     </body>

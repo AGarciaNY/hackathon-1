@@ -2,58 +2,73 @@
 <html>
 
 <head>
-    <title> </title>
-    <link rel="stylesheet" href="css/api.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script>
-        /* global $ */
-        $(document).ready(function() {
-          var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-            var fetchedImages = $.getJSON(flickerAPI, {
-                tags: "weather event",
-                tagmode: "any",
-                format: "json"
-            })
-            .done(function( data ) {
-                  $.each( data.items, function( i, item ) {
-                    $( "<img>" ).attr( "src", item.media.m ).appendTo( "#app" );
-                    if ( i === 5 ) {
-                      return false;
-                    }
-                  });
-                });
-        
-
-        $("#getImg").click(function(data) {
-          console.log('clicked!!!');
-          console.log(data);
-          
-            // var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-            // var seaLevelData = "";
-            // $.getJSON(flickerAPI, {
-            //         tags: "weather event",
-            //         tagmode: "any",
-            //         format: "json"
-            //     })
-            //     .done(function(data) {
-            //         $.each(data.items, function(i, item) {
-            //             $("<img>").attr("src", item.media.m).appendTo("#app");
-            //             if (i === 5) {
-            //                 return false;
-            //             }
-            //         });
-            //     });
-        });
+  <title> </title>
+  <link rel="stylesheet" href="css/api.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script>
+    /* global $ */
+    $(document).ready(function() {
+      var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+      var fetchedImages;
+      $.getJSON(flickerAPI, {
+          tags: "natural disaster",
+          tagmode: "any",
+          format: "json"
+        })
+        .done(function(data) {
+          fetchedImages = data;
         });
 
-            
-    </script>
+
+      $("#getImg").click(function(data) {
+        $('#app').empty();
+        $.each(fetchedImages.items, function(i, item) {
+
+          $("<img>").attr("src", item.media.m).appendTo("#app");
+
+          if (i === 10) {
+            return false;
+          }
+        });
+      });
+    });
+  </script>
 </head>
 
 <body>
-    <div id="app"></div>
-    <button  id="getImg" type="button" class="btn btn-primary" >Get Images</button>
+  <div class="nav-container">
+      <span style="font-size:30px;cursor:pointer; color:black; padding: 10px; background:white" onclick="openNav()">&#9776; </span>
+    
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="nav-side-item" href="index.html">About</a>
+        <a class="nav-side-item" href="RateChange.html">Rate Of Change</a>
+        <a class="nav-side-item" href="Displacment.html">Displacement</a>
+        <a class="nav-side-item" href="sealevel.html">Effects on Sea Level</a>
+        <a class="nav-side-item" href="Contact-us.html">Contact</a>
+        <a class="nav-side-item" href="imgApi.html">Image Api</a>
+        <a class="nav-side-item" href="Chart-rate-of-change.html">Chart of Rate of Change</a>
+      </div>
+    </div>
+    
+    <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.display = "block";
+        document.getElementById("mySidenav").style.width = "250px";;
+      
+      
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.display = "none";
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+  <p id="title"><b>You can see what happen when the earth gets too warm.</b></p>
+  <div id="app"></div>
+  <button id="getImg" type="button" class="btn btn-primary">Get Images</button>
 </body>
 
 </html>

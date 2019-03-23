@@ -105,8 +105,13 @@ input[type=range]{
     position: relative;
     margin: 0 auto;
     font-size: 20px;
+    text-align: center;
 }
 
+.yearBegin {
+    Left: 0;
+    position: absolute;
+}
 /*#slide {*/
 /*    text-align: center;*/
 /*    color: white;*/
