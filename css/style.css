@@ -1,0 +1,106 @@
+/* Side Nav */
+
+span{
+  position: relative;
+}
+
+.nav-container{
+  z-index: 2;
+  position: fixed;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidenav a {
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.nav-side-item{
+    padding: 80px 8px 8px 32px;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* contact */
+
+#input_field{
+    width: 20%;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+#comment{
+    width: 100%;
+    padding: 10%;
+    text-align: center;
+    background-color: silver;
+    border: 3px solid;
+    border-radius: 5px;
+}
+
+.left{
+    text-align: left;
+    padding-left: 40px;
+}
+
+.contact-in{
+    width: 80%;
+    margin: 30px;
+    border-radius: 5px;
+    border: 0px;
+}
+
+#contact-text{
+    max-height: 250px;
+    min-height: 100px;
+}
+
+h3{
+  padding-top: 40px;
+  text-align: center;   
+}
+
+#text-contacts{
+  padding-top: 30px;
+  text-align: center;
+  position: relative;
+  width: 30%;
+  margin: auto;
+}
+
+hr{
+  color: black;
+  background: black;
+  width: 90%;
+  height: 2px;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Code Nation Hackathon</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Your CSS Linked Below-->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- jQuery Linked Below-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap Javascript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Your Javascript Linked Below-->
+    <script src="js/displace.js" defer></script> 
+    <link rel="icon" href="https://png.pngtree.com/element_origin_min_pic/16/09/19/1157df5d59f1661.jpg">
+  </head>
+  <body>
+    
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
+    
+      <!--<div id="navbar">-->
+      <!--  <diV class="about nav-item">-->
+      <!--    <a href="index.html">-->
+      <!--      <p class="nav-font">Home</p>-->
+      <!--    </a>-->
+      <!--  </diV>-->
+      <!--  <div class="ROC nav-item right">-->
+      <!--    <a href="RateChange.html">-->
+      <!--      <p class="nav-font">Rate Of Change</p>-->
+      <!--    </a>-->
+      <!--  </div>-->
+      <!--  <div class="Diaplacement nav-item right">-->
+      <!--    <a href="Displacment.html">-->
+      <!--      <p class="nav-font">Displacement</p>-->
+      <!--    </a>-->
+      <!--  </div>-->
+      <!--  <div class="AOS nav-item right">-->
+      <!--    <a href="sealevel.html">-->
+      <!--      <p class="nav-font">Effects On Sea</p>-->
+      <!--    </a>-->
+      <!--  </div>-->
+      <!--</div>-->
+    
+    <div class="nav-container">
+      <span style="font-size:30px;cursor:pointer; color:white; padding: 10px;" onclick="openNav()">&#9776; </span>
+    
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="nav-side-item" href="index.html">About</a>
+        <a class="nav-side-item" href="RateChange.html">Rate Of Change</a>
+        <a class="nav-side-item" href="Displacment.html">Displacement</a>
+        <a class="nav-side-item" href="sealevel.html">Effects on Sea</a>
+        <a class="nav-side-item" href="Contact-us.html">Contact</a>
+      </div>
+    </div>
+    
+    
+    <!--<div class="container-img">-->
+    <!--  <div class="fluid-img">-->
+    <!--    <center>-->
+    <!--      <img id="calm-img" src="data:image/jpeg;base64,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">-->
+    <!--    </center>-->
+    <!--  </div>-->
+    <!--</div>-->
+    
+    <div class="main-image">
+      <img src="">
+    </div>
+    
+    
+    <div class="body-content">
+      <div class="container-h">
+        <h1 class='heading1'>Effects of climate change</h1>
+      </div>
+      <div class="funct-content">
+        <div>
+          <h2 class="titles">Displacment</h2>
+          <p class="titles small-title">Due to increase in heat, ice melt and calamitous weather, global climate change will force both people, and animals to leave their homes en masse, causing massive instability, and war on a global scale.</p>
+          <p></p>
+        </div>
+        <div>
+          <iframe class="main-funct" src="https://www.google.com/maps/d/u/0/embed?mid=1iILI9Ru9JkP1n5TIIAlfizcEsbsoyrUd" width="1000" height="480"></iframe>
+        </div>
+        <p></p>
+      </div>
+      
+      <a  class='temporary' href="index.html"> Link back to index.html</a>
+    </div>
+    
+    
+    
+    
+    <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.display = "block";
+        document.getElementById("mySidenav").style.width = "250px";;
+      
+      
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.display = "none";
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+    
+    
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  
+  </body>
+</html>

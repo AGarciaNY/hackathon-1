@@ -1,0 +1,131 @@
+<!CTYPE html>
+<html>
+    <head>
+    <title>Code Nation Hackathon</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Your CSS Linked Below-->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- jQuery Linked Below-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <!-- Bootstrap Javascript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Your Javascript Linked Below-->
+    <script src="js/script.js" ></script> 
+    <link rel="icon" href="https://png.pngtree.com/element_origin_min_pic/16/09/19/1157df5d59f1661.jpg">
+  </head>
+    </head>
+    <body>
+        
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+    </body>
+<html>
+  <head>
+      <script 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMLz-AR-gBzs8l0MAErJ81epT8ng3kc6U">
+    </script>
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    
+    <div class="nav-container">
+      <span style="font-size:30px;cursor:pointer; color:black; padding: 10px;" onclick="openNav()">&#9776; </span>
+    
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="nav-side-item" href="index.html">About</a>
+        <a class="nav-side-item" href="RateChange.html">Rate Of Change</a>
+        <a class="nav-side-item" href="Displacment.html">Displacement</a>
+        <a class="nav-side-item" href="sealevel.html">Effects on Sea</a>
+        <a class="nav-side-item" href="Contact-us.html">Contact</a>
+      </div>
+    </div>
+    
+    <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.display = "block";
+        document.getElementById("mySidenav").style.width = "250px";;
+      
+      
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.display = "none";
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+    
+      <div id="map">
+        
+        
+    </div>
+    
+    <script>
+      function initMap() {
+        var uluru = {lat:40.7222351, lng: -73.9941112};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+            title:"title",
+          position: uluru,
+          map: map
+        });
+      }
+      initMap()
+    </script>
+   
+   
+<div id="text-contacts">
+  <h1>You could visit us now</h1>
+  <hr>
+  <p>350 W Broadway New York,NY
+  Contact us at:
+  Contact us@gmail.com
+  </p>
+</div>
+
+   
+ 
+ <div id="input_field">
+  
+  <form id="comment" action="https://formspree.io/adeel@citypolyhs.org" method="POST">
+    <h4 class="left">Name</h4>
+    <input placeholder="Your Name" class="contact-in" type="text" name="name">
+    <h4 class="left">Reply To</h4>
+    <textarea id="contact-text" class="contact-in" name="message" placeholder="Your Message"></textarea>
+    
+    <input class="contact-in btn-primary" type="submit" value="Send">
+  </form>
+  
+</div>    
+      
+      
+        
+      
+     
+      
+                                                                           
+        </div>
+    </div>
+    </div>
+   
+    
+  </body>
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>    
+
+</html>
