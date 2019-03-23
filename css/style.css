@@ -104,3 +104,7 @@ hr{
   width: 90%;
   height: 2px;
 }
+
+.close-btn{
+  background-color: white;
+}
